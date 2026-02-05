@@ -2,95 +2,101 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Literary Book App Design System
+   Warm, inviting palette inspired by vintage bookshops
+   All colors in HSL */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:wght@300;400;500;600&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Warm cream background */
+    --background: 39 33% 97%;
+    --foreground: 24 25% 14%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Paper-like card surfaces */
+    --card: 40 40% 98%;
+    --card-foreground: 24 25% 14%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 40 40% 98%;
+    --popover-foreground: 24 25% 14%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Deep burgundy/maroon primary */
+    --primary: 350 65% 35%;
+    --primary-foreground: 39 33% 97%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Warm sand secondary */
+    --secondary: 35 30% 90%;
+    --secondary-foreground: 24 25% 14%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 35 20% 92%;
+    --muted-foreground: 24 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Gold accent for ratings/highlights */
+    --accent: 38 80% 55%;
+    --accent-foreground: 24 25% 14%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 39 33% 97%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 35 25% 85%;
+    --input: 35 25% 85%;
+    --ring: 350 65% 35%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Custom literary tokens */
+    --gold: 38 80% 55%;
+    --gold-foreground: 24 25% 14%;
+    --brown: 24 35% 25%;
+    --brown-light: 30 20% 75%;
+    --cream: 40 40% 95%;
+    --sage: 140 15% 45%;
+    
+    /* Sidebar */
+    --sidebar-background: 35 30% 95%;
+    --sidebar-foreground: 24 25% 14%;
+    --sidebar-primary: 350 65% 35%;
+    --sidebar-primary-foreground: 39 33% 97%;
+    --sidebar-accent: 35 30% 90%;
+    --sidebar-accent-foreground: 24 25% 14%;
+    --sidebar-border: 35 25% 85%;
+    --sidebar-ring: 350 65% 35%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background: 24 25% 10%;
+    --foreground: 39 33% 95%;
+    --card: 24 20% 14%;
+    --card-foreground: 39 33% 95%;
+    --popover: 24 20% 14%;
+    --popover-foreground: 39 33% 95%;
+    --primary: 350 55% 50%;
+    --primary-foreground: 39 33% 97%;
+    --secondary: 24 20% 20%;
+    --secondary-foreground: 39 33% 95%;
+    --muted: 24 15% 20%;
+    --muted-foreground: 35 15% 60%;
+    --accent: 38 70% 50%;
+    --accent-foreground: 24 25% 14%;
+    --destructive: 0 60% 45%;
+    --destructive-foreground: 39 33% 97%;
+    --border: 24 15% 25%;
+    --input: 24 15% 25%;
+    --ring: 350 55% 50%;
+    --gold: 38 70% 50%;
+    --brown: 30 20% 75%;
+    --brown-light: 24 35% 25%;
+    --cream: 24 20% 18%;
+    --sage: 140 15% 55%;
+    --sidebar-background: 24 20% 12%;
+    --sidebar-foreground: 39 33% 95%;
+    --sidebar-primary: 350 55% 50%;
+    --sidebar-primary-foreground: 39 33% 97%;
+    --sidebar-accent: 24 15% 20%;
+    --sidebar-accent-foreground: 39 33% 95%;
+    --sidebar-border: 24 15% 25%;
+    --sidebar-ring: 350 55% 50%;
   }
 }
 
@@ -100,6 +106,44 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .book-card-shadow {
+    box-shadow: 
+      0 4px 6px -1px hsl(24 25% 14% / 0.08),
+      0 10px 20px -2px hsl(24 25% 14% / 0.06),
+      4px 0 15px -3px hsl(24 25% 14% / 0.1);
+  }
+
+  .paper-texture {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  }
+
+  .genre-chip {
+    @apply px-4 py-2 rounded-full border border-border bg-card hover:bg-secondary 
+           transition-all duration-300 cursor-pointer font-medium text-sm
+           hover:border-primary hover:text-primary;
+  }
+
+  .genre-chip-active {
+    @apply bg-primary text-primary-foreground border-primary;
+  }
+
+  .critic-quote {
+    @apply relative pl-4 italic text-muted-foreground before:absolute before:left-0 
+           before:top-0 before:bottom-0 before:w-1 before:bg-primary before:rounded-full;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
   }
 }
